@@ -1,5 +1,5 @@
 import React from 'react';
-import { FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon, ArrowRight } from 'lucide-react'; // Import LinkedinIcon
+import { FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -15,7 +15,7 @@ const socialMediaLinks = [
   { name: 'Facebook', icon: FacebookIcon, url: 'https://www.facebook.com/your-profile' },
   { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/your-profile' },
   { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/your-profile' },
-  { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://www.linkedin.com/in/your-profile' }, // Add LinkedIn
+  { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://www.linkedin.com/in/your-profile' },
 ];
 
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
     <footer className="bg-gradient-to-br from-purple-300 via-white to-pink-200">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-4 rounded-lg bg-gradient-to-r from-purple-900 to-purple-700 p-6 shadow-lg sm:flex-row sm:justify-between">
-          <strong className="text-xl text-white sm:text-xl">
+          <strong className="text-xl text-white sm:text-xl text-center sm:text-left">
             Ready to boost your business productivity?
           </strong>
           
@@ -33,13 +33,17 @@ export default function Footer() {
           </Link>
         </div>
         
-        <div className="mt-16 flex justify-center space-x-8">
-          {navItems.map((item) => (
-            <Link key={item.name} href={item.path} className="text-gray-800 hover:text-purple-700 transition duration-300">
-              {item.name}
-            </Link>
-          ))}
-        </div>
+        <nav className="mt-16">
+          <ul className="grid gap-4 sm:flex justify-center items-center sm:space-x-8">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <Link href={item.path} className="text-gray-800 hover:text-purple-700 transition duration-300">
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
         
         <div className="mt-8">
           <ul className="flex justify-center gap-6">
@@ -60,15 +64,14 @@ export default function Footer() {
         </div>
         
         <div className="mt-8 flex flex-col items-center">
-        <div className="mb-4 w-[150px] h-[150px] bg-black rounded-full flex items-center justify-center">
-    {/* Image with rounded shape */}
-    <Image 
-      src="/exec.png" 
-      alt="Executive" 
-      width={180} 
-      height={180} 
-      className="rounded-full"
-    />
+          <div className="mb-4 w-[150px] h-[150px] bg-black rounded-full flex items-center justify-center overflow-hidden">
+            <Image
+              src="/exec.png"
+              alt="Executive"
+              width={180}
+              height={180}
+              className="rounded-full object-cover"
+            />
           </div>
           <p className="text-sm text-gray-600 text-center">
             Copyright &copy; Faabvs {new Date().getFullYear()}. All rights reserved.

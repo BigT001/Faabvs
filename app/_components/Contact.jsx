@@ -80,7 +80,7 @@ const Contact = () => {
                 <strong className="font-bold">Success!</strong>
                 <span className="block sm:inline">
                   {" "}
-                  Thanks for your message! We'll get back to you soon.
+                  Thanks for your message! I will get back to you soon.
                 </span>
               </div>
             )}
@@ -182,7 +182,7 @@ const Contact = () => {
           <div className="space-y-4 justify-center items-center">
             <div className="flex space-x-4 justify-center">
               {contactInfo.map((item, index) => (
-                <div key={index} className="flex items-center space-x-2 mt-10">
+                <div key={index} className="flex sm:grid items-center space-x-2 mt-10">
                   <item.icon className="w-5 h-5 text-secondary" />
                   <span>{item.text}</span>
                 </div>

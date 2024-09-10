@@ -19,7 +19,7 @@ function Hero() {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full">
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{stopColor: '#f8f9fa', stopOpacity: 1}} />
+              <stop offset="0%" style={{stopColor: '#d49af5', stopOpacity: 1}} />
               <stop offset="100%" style={{stopColor: '#e9ecef', stopOpacity: 1}} />
             </linearGradient>
           </defs>
@@ -45,11 +45,11 @@ function Hero() {
                 className="rounded-lg transform scale-x-[-1] shadow-2xl brightness-105 contrast-95"
               />
               {/* Title and paragraph overlay for mobile and tablet */}
-              <div className="bg-primary absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t  to-transparent md:hidden">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
-                  Elevate Your <span className='text-gray-700'>Business</span> <br/>with Expert Virtual Assistance
+              <div className="bg-white/70 absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t  to-transparent md:hidden">
+                <h1 className="text-3xl sm:text-4xl font-bold text-black text-center mb-4">
+                  Elevate Your <span className='text-secondary'>Business</span> <br/>With Expert Virtual Assistance
                 </h1>
-                <p className="text-xl text-white text-center">
+                <p className="text-xl text-black text-center">
                   I help entrepreneurs and businesses save time
                   and boost productivity with top-notch virtual assistant services.
                 </p>
