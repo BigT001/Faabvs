@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Calendar, Clock, Globe } from 'lucide-react'
+import Link from 'next/link';
 
 function Hero() {
   const testimonials = [
@@ -12,28 +13,25 @@ function Hero() {
   ];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-50 to-pink-50 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"
-              style={{
-                backgroundColor: `hsl(${Math.random() * 360}, 70%, 80%)`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                width: `${Math.random() * 10 + 5}%`,
-                height: `${Math.random() * 10 + 5}%`,
-                animationDelay: `${Math.random() * 10}s`,
-                animationDuration: `${Math.random() * 10 + 10}s`,
-              }}
-            ></div>
-          ))}
-        </div>
+    <div className="relative overflow-hidden">
+      {/* Updated professional background */}
+      <div className="absolute inset-0 w-full h-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{stopColor: '#f8f9fa', stopOpacity: 1}} />
+              <stop offset="100%" style={{stopColor: '#e9ecef', stopOpacity: 1}} />
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" fill="url(#grad1)" />
+          <circle cx="0" cy="0" r="60" fill="#007bff" fillOpacity="0.1" />
+          <circle cx="100" cy="100" r="40" fill="#6610f2" fillOpacity="0.1" />
+          <polygon points="0,100 100,0 100,100" fill="#28a745" fillOpacity="0.05" />
+          <path d="M0 70 Q 50 50 100 80 L 100 100 L 0 100 Z" fill="#dc3545" fillOpacity="0.05" />
+        </svg>
       </div>
 
+      {/* Rest of the component remains the same */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-28">
         <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
@@ -46,56 +44,70 @@ function Hero() {
                 objectFit="cover"
                 className="rounded-lg transform scale-x-[-1] shadow-2xl brightness-105 contrast-95"
               />
-              {/* Title overlay for mobile and tablet */}
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent md:hidden">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white text-center">
-                  Elevate Your <span className='text-primary'>Business</span> with Expert Virtual Assistance
+              {/* Title and paragraph overlay for mobile and tablet */}
+              <div className="bg-primary absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t  to-transparent md:hidden">
+                <h1 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
+                  Elevate Your <span className='text-gray-700'>Business</span> <br/>with Expert Virtual Assistance
                 </h1>
+                <p className="text-xl text-white text-center">
+                  I help entrepreneurs and businesses save time
+                  and boost productivity with top-notch virtual assistant services.
+                </p>
               </div>
             </div>
           </div>
 
           {/* Content Section */}
           <div className="order-2 md:order-1 mt-10 md:mt-0">
-            <h1 className="hidden md:block text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="hidden md:block text-4xl md:text-5xl font-bold text-black mb-6">
               Elevate Your <span className='text-primary'>Business</span> with Expert Virtual Assistance
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              Hi, I'm Hannah Olafayo. I help entrepreneurs and businesses save time
+            <p className="hidden md:block text-xl  mb-8">
+              I help entrepreneurs and businesses save time
               and boost productivity with top-notch virtual assistant services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition duration-300 shadow-lg hover:shadow-xl">
-                Book Me Now
-              </button>
-              <button className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition duration-300 shadow-lg hover:shadow-xl">
-                View Services
-              </button>
+            <div className="flex flex-row gap-4 mb-12 justify-center md:justify-start">
+              <Link href="BookMe" className="inline-block">
+                <button className="bg-primary text-white px-6 py-3 rounded-full font-semibold
+                 hover:bg-secondary transition duration-300 shadow-lg hover:shadow-xl whitespace-nowrap">
+                  Book Me Now
+                </button>
+              </Link>
+              <Link href="Services" className="inline-block">
+                <button className="border-2 border-primary text-primary px-6 py-3 rounded-full 
+                font-semibold hover:bg-primary hover:text-white transition duration-300 
+                shadow-lg hover:shadow-xl whitespace-nowrap">
+                  View Services
+                </button>
+              </Link>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-row flex-wrap gap-6">
               <div className="flex items-center">
                 <Clock className="text-primary mr-2" size={20} />
-                <span className="text-gray-700">Save 20+ hours/week</span>
+                <span className="text-gray-700 whitespace-nowrap">Save 20+ hours/week</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="text-primary mr-2" size={20} />
-                <span className="text-gray-700">24/7 Availability</span>
+                <span className="text-gray-700 whitespace-nowrap">24/7 Availability</span>
               </div>
               <div className="flex items-center">
                 <Globe className="text-primary mr-2" size={20} />
-                <span className="text-gray-700">Global Clientele</span>
+                <span className="text-gray-700 whitespace-nowrap">Global Clientele</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Spacing div to create gap */}
+      <div className="lg:hidden h-20 md:h-24"></div>
+
       {/* Infinity Testimony Scroll */}
-      <div className="absolute border-secondary bottom-0 left-0 right-0 overflow-hidden py-4 bg-white/50 backdrop-blur-sm">
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden py-4 bg-white/50 backdrop-blur-sm">
         <div className="flex animate-scroll">
           {[...testimonials, ...testimonials].map((testimonial, index) => (
-            <div key={index} className="flex-shrink-0 w-64 mx-4 border-purple-950  border-2 p-4 bg-purple-00 rounded-lg">
+            <div key={index} className="flex-shrink-0 w-64 mx-4 border-purple-950 border-2 p-4 bg-purple-00 rounded-lg">
               <p className="text-black italic">&ldquo;{testimonial}&rdquo;</p>
             </div>
           ))}

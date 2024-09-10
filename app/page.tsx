@@ -60,7 +60,7 @@ export default function Home() {
       
       </div>
 
-      <div className="relative bg-gradient-to-r from-purple-50 to-pink-50 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-purple-150 to-pink-50 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-full h-full">
           {[...Array(20)].map((_, i) => (
