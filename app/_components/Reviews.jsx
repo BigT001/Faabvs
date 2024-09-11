@@ -15,7 +15,7 @@ const reviews = [
   {
     rating: 5,
     title: "Professional",
-    content: "Hannah was my PA for almost 2yrs before she relocated abroad, UK precisely. Her level of organisation to daily duties is just class. She was very proactive about anticipating needs. She takes care of scheduling, travel arrangements, and even some personal errands seamlessly. I have found her communication to be prompt, professional, and clear. This has allowed me to focus on more important matters, knowing all details are handled perfectly. I can't recommend her highly enough!",
+    content: "Hannah was my PA for 2yrs before she relocated to the UK. Her level of organisation to daily duties is just class. She is very proactive about anticipating needs. She takes care of scheduling, travel arrangements, and even some personal errands seamlessly. I have found her communication to be prompt, professional, and clear. This has allowed me to focus on more important matters, knowing all details are handled perfectly. I can't recommend her highly enough!",
     author: "Mr O. Abiodun",
     company: "CEO, Beniour Executive Salon."
   },

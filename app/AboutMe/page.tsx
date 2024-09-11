@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Award,
   Briefcase,
@@ -14,7 +15,6 @@ import {
   LayoutDashboard,
   Lightbulb,
 } from "lucide-react";
-import React from "react";
 import {
   Card,
   CardContent,
@@ -99,30 +99,30 @@ function AboutMePage() {
               <span className="text-secondary">Your Professional virtual Assistant</span>
             </h1>
             <p className="text-xl">
-              Experienced Customer support | Email Manager | Customer Support |
+              Experienced Customer support | Email Manager | Social Media | Personal Assistant |
               Website Development
             </p>
           </div>
         </section>
 
-        <section>
+        <section className="relative">
           <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2 gap-8">
-              <div className="relative h-80 lg:h-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="relative h-screen lg:">
                 <img
                   alt="faabvs ceo"
                   src="/Faabvs-ceo.png"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  className="absolute inset-0 w-full h-full object-cover object-center lg:bottom-0"
                 />
-                <div className="absolute bottom-0 right-0 bg-primary text-white p-6 rounded-tl-lg">
+                <div className="absolute bottom-7 lg:bottom-0 right-0 bg-primary text-white p-6 rounded-tl-lg">
                   <p className="text-2xl font-bold">3+ Years</p>
                   <p>of Experience</p>
                 </div>
               </div>
 
-              <Card className="relative flex flex-col justify-between shadow-xl border-primary">
+              <Card className="relative flex flex-col justify-between shadow-xl border-primary lg:mt-0 -mt-16">
                 <CardHeader>
-                  <CardTitle className="text-3xl font-bold text-secondary px-10">
+                  <CardTitle className="text-3xl font-bold text-secondary lg:px-10">
                     I am...
                   </CardTitle>
                 </CardHeader>

@@ -2,7 +2,20 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useForm as useFormspree } from "@formspree/react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { ArrowRight, Calendar, MessageSquare, FileText, ClipboardCheck, Rocket, Mail, Phone, Instagram, Twitter, Facebook, Linkedin } from 'lucide-react';
+import {
+  ArrowRight,
+  Calendar,
+  MessageSquare,
+  FileText,
+  ClipboardCheck,
+  Rocket,
+  Mail,
+  Phone,
+  Instagram,
+  Twitter,
+  Facebook,
+  Linkedin,
+} from "lucide-react";
 
 import {
   Form,
@@ -56,20 +69,27 @@ const Contact = () => {
   ];
 
   const socialMedia = [
-    { icon: Instagram, link: "https://www.instagram.com/hannah_faab"  },
+    { icon: Instagram, link: "https://www.instagram.com/hannah_faab" },
     { icon: Twitter, link: "https://twitter.com" },
-    { icon: Facebook, link: "https://facebook.com"  },
-    { icon: Linkedin, link: "https://www.linkedin.com/in/hannah-olafayo-b093242b3"  },
+    { icon: Facebook, link: "https://facebook.com" },
+    {
+      icon: Linkedin,
+      link: "https://www.linkedin.com/in/hannah-olafayo-b093242b3",
+    },
   ];
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center text-secondary">You Can Contact Me</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center text-secondary">
+        You Can Contact Me
+      </h1>
 
       <div className="grid md:grid-cols-2 gap-8">
         <Card>
           <CardHeader>
-            <h2 className="text-2xl font-semibold text-center text-secondary">Get in Touch</h2>
+            <h2 className="text-2xl font-semibold text-center text-secondary">
+              Get in Touch
+            </h2>
           </CardHeader>
           <CardContent>
             {isSubmitSuccessful && (
@@ -94,7 +114,9 @@ const Contact = () => {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-secondary">Full Name</FormLabel>
+                      <FormLabel className="text-secondary">
+                        Full Name
+                      </FormLabel>
                       <FormControl>
                         <Input placeholder="Enter Your Full Name" {...field} />
                       </FormControl>
@@ -124,7 +146,9 @@ const Contact = () => {
                   name="companyName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-secondary">Company Name (Optional)</FormLabel>
+                      <FormLabel className="text-secondary">
+                        Company Name (Optional)
+                      </FormLabel>
                       <FormControl>
                         <Input placeholder="Your Company" {...field} />
                       </FormControl>
@@ -166,23 +190,27 @@ const Contact = () => {
           <h2 className="text-3xl font-bold text-secondary">
             Steps in Hiring Me as Your Virtual Assistant
           </h2>
-          
+
           <ol className="relative border-l border-gray-200 dark:border-primary ml-10">
             {hiringSteps.map((step, index) => (
               <li key={index} className="mb-8 ml-10">
-                <span className="absolute flex items-center justify-center w-8 h-8  
-                  bg-blue-100 rounded-full -left-4 ring-2 dark:ring-primary dark:bg-white">
+                <span
+                  className="absolute flex items-center justify-center w-8 h-8  
+                  bg-blue-100 rounded-full -left-4 ring-2 dark:ring-primary dark:bg-white"
+                >
                   <step.icon className="w-4 h-4 text-primary dark:text-secondary" />
                 </span>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-900">{step.text}</p>
+                <p className="text-base font-normal text-gray-500 dark:text-gray-900">
+                  {step.text}
+                </p>
               </li>
             ))}
           </ol>
 
-          <div className="space-y-4 justify-center items-center">
-            <div className="flex space-x-4 justify-center">
+          <div className="space-y-4 justify-center items-center mt-5">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center items-center mt-10">
               {contactInfo.map((item, index) => (
-                <div key={index} className="flex sm:grid items-center space-x-2 mt-10">
+                <div key={index} className="flex items-center space-x-2">
                   <item.icon className="w-5 h-5 text-secondary" />
                   <span>{item.text}</span>
                 </div>
@@ -193,10 +221,10 @@ const Contact = () => {
           <div className="space-y-4 items-center">
             <div className="flex space-x-4 items-center justify-center">
               {socialMedia.map((item, index) => (
-                <a 
-                  key={index} 
-                  href={item.link} 
-                  target="_blank" 
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-secondary hover:text-primary transition-colors"
                 >
