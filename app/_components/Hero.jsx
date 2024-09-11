@@ -46,8 +46,8 @@ function Hero() {
               />
               {/* Title and paragraph overlay for mobile and tablet */}
               <div className="bg-white/70 absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t  to-transparent md:hidden">
-                <h1 className="text-3xl sm:text-4xl font-bold text-black text-center mb-4">
-                  Elevate Your <span className='text-secondary'>Business</span> <br/>With Expert Virtual Assistance
+                <h1 className="text-3xl sm:text-3xl font-bold text-black text-center mb-4">
+                  Elevate Your <span className='text-secondary'>Business</span> <br/>With An Expert Virtual Assistance
                 </h1>
                 <p className="text-xl text-black text-center">
                   I help entrepreneurs and businesses save time
@@ -60,7 +60,8 @@ function Hero() {
           {/* Content Section */}
           <div className="order-2 md:order-1 mt-10 md:mt-0">
             <h1 className="hidden md:block text-4xl md:text-5xl font-bold text-black mb-6">
-              Elevate Your <span className='text-primary'>Business</span> with Expert Virtual Assistance
+              Elevate Your <span className='text-primary'>Business</span> With An 
+              <span className='text-primary'>Expert</span> Virtual Assistance
             </h1>
             <p className="hidden md:block text-xl  mb-8">
               I help entrepreneurs and businesses save time

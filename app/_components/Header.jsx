@@ -21,10 +21,10 @@ function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/Services" },
     { name: "About Me", path: "/AboutMe" },
-    { name: "Book Me", path: "/BookMe" },
+    { name: "Services", path: "/Services" },
     { name: "Prices", path: "/Pricing" },
+    { name: "Book Me", path: "/BookMe" },
   ];
 
   const handleItemClick = () => {
