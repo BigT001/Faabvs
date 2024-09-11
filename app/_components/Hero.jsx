@@ -52,7 +52,7 @@ function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-10">
         <div className="text-4xl font-bold text-white bg-secondary md:max-w-96 lg:text-center text-center md:text-center">
-          Faabs Virtual Service
+          Faab Virtual Solutions
         </div>
         <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}

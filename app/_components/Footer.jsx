@@ -5,14 +5,13 @@ import Image from 'next/image';
 
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'Services', path: '/Services' },
   { name: 'About Me', path: '/AboutMe' },
-  { name: 'Book Me', path: '/BookMe' },
+  { name: 'Services', path: '/Services' },
   { name: 'Prices', path: '/Pricing' },
+  { name: 'Book Me', path: '/BookMe' },
 ];
 
 const socialMediaLinks = [
-  { name: 'Facebook', icon: FacebookIcon, url: 'https://www.facebook.com/your-profile' },
   { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/your-profile' },
   { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/your-profile' },
   { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://www.linkedin.com/in/your-profile' },
@@ -27,7 +26,9 @@ export default function Footer() {
             Ready to boost your business productivity?
           </strong>
           
-          <Link href="/BookMe" className="inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-purple-950 hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90 transition duration-300">
+          <Link href="/BookMe" className="inline-flex items-center gap-2 rounded-full border
+           border-white bg-white px-8 py-3 text-purple-950 hover:bg-transparent hover:text-white
+           focus:outline-none focus:ring active:bg-white/90 transition duration-300">
             <span className="text-sm font-medium">Book Me Now</span>
             <ArrowRight className="size-5" />
           </Link>
@@ -73,9 +74,16 @@ export default function Footer() {
               className="rounded-full object-cover"
             />
           </div>
-          <p className="text-sm text-gray-600 text-center">
-            Copyright &copy; Faabvs {new Date().getFullYear()}. All rights reserved.
-          </p>
+          <div className="w-full flex justify-between items-center mt-4">
+            <Link 
+              href="/Document/PrivacyPolicy.docx.pdf" 
+              className="text-sm text-gray-600 hover:text-purple-700 transition duration-300">
+              Privacy Policy
+            </Link>
+            <p className="text-sm text-gray-600 text-center">
+              Copyright &copy; Faabvs {new Date().getFullYear()}. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

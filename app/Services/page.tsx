@@ -262,7 +262,7 @@ const ServicePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
             <h1 className="text-6xl font-extrabold text-gray-900 mb-4 relative inline-block">
-                <span className="relative z-10">Elevate Your</span>
+                <span className="relative z-10">Elevate Your</span> <br />
                 <span className="relative z-10 text-primary"> Business Strategy</span>
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0" fill="currentColor"></path>

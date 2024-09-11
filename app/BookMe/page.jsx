@@ -40,12 +40,23 @@ const BookMeContactPage = () => {
       </div>
 
       <div className="container mx-auto p-4 relative z-10">
-        <section className="text-center mt-20">
+        <section className="text-center mt-10">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">
-              Book me now for exceptional <br />
-              <span className="text-secondary"> service and collaboration.</span>
-            </h1>
+          <h1 className="text-6xl font-extrabold text-gray-900 mb-20 mt-10 relative inline-block">
+          <span className="relative z-10">Book me now for exceptional</span> <br />
+          <span className="relative z-10 text-primary"> service and collaboration.</span>
+          <svg
+            className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
+            viewBox="0 0 100 10"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </h1>
+            
             <p className="text-xl">
               Customer support | Email Manager | Social Media | Minutes Taking |
               Website Development

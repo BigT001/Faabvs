@@ -58,21 +58,24 @@ function Header() {
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-24 pl-8 pr-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 text-sm bg-white bg-opacity-20"
+                className="w-24 pl-8 pr-2 py-1 border rounded-full focus:outline-none 
+                focus:ring-2 focus:ring-primary text-gray-800 text-sm bg-white bg-opacity-20"
               />
               <Search
                 className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400"
                 size={16}
               />
             </div>
+            
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/hannah_faab"
               target="_blank"
               rel="noopener noreferrer"
               className="mr-3 hover:text-secondary"
             >
               <Instagram size={24} />
             </a>
+            
             <button
               type="button"
               className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
@@ -113,7 +116,7 @@ function Header() {
               />
             </div>
             <a
-              href="https://www.instagram.com"
+               href="https://www.instagram.com/hannah_faab"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-3 hover:text-secondary"

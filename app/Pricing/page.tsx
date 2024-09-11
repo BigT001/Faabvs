@@ -1,7 +1,13 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 
 interface PricingTier {
   name: string;
@@ -21,8 +27,8 @@ const websitePricingTiers: PricingTier[] = [
       "Contact form integration",
       "Mobile-friendly design",
       "1 round of revisions",
-      "1 month of support"
-    ]
+      "1 month of support",
+    ],
   },
   {
     name: "Professional",
@@ -36,8 +42,8 @@ const websitePricingTiers: PricingTier[] = [
       "E-commerce functionality (up to 50 products)",
       "Social media integration",
       "2 rounds of revisions",
-      "3 months of support"
-    ]
+      "3 months of support",
+    ],
   },
   {
     name: "Enterprise",
@@ -52,9 +58,9 @@ const websitePricingTiers: PricingTier[] = [
       "Custom admin dashboard",
       "Performance optimization",
       "Unlimited revisions",
-      "6 months of support and maintenance"
-    ]
-  }
+      "6 months of support and maintenance",
+    ],
+  },
 ];
 
 const emailPricingTiers: PricingTier[] = [
@@ -66,8 +72,8 @@ const emailPricingTiers: PricingTier[] = [
       "One-off email detox: £120",
       "Email maintenance: £30 per hour",
       "Email & calendar management: £35 per hour (min. 2hrs/week)",
-      "Minutes taking and transcription: £30 per hour"
-    ]
+      "Minutes taking and transcription: £30 per hour",
+    ],
   },
   {
     name: "Monthly Retainer",
@@ -80,9 +86,9 @@ const emailPricingTiers: PricingTier[] = [
       "20 hours: £600/month",
       "40 hours: £1,200/month",
       "Flexible scheduling",
-      "Priority support"
-    ]
-  }
+      "Priority support",
+    ],
+  },
 ];
 
 const customerServiceTiers: PricingTier[] = [
@@ -94,8 +100,8 @@ const customerServiceTiers: PricingTier[] = [
       "Minimum of 3 hours per week",
       "Email and chat support",
       "Ticket management",
-      "Customer inquiry handling"
-    ]
+      "Customer inquiry handling",
+    ],
   },
   {
     name: "Monthly Retainer",
@@ -107,9 +113,9 @@ const customerServiceTiers: PricingTier[] = [
       "20 hours: £700/month",
       "30 hours: £1,050/month",
       "Consistent support team",
-      "Regular reporting"
-    ]
-  }
+      "Regular reporting",
+    ],
+  },
 ];
 
 const socialMediaTiers: PricingTier[] = [
@@ -121,8 +127,8 @@ const socialMediaTiers: PricingTier[] = [
       "1 social media platform",
       "5 posts per month",
       "Caption generation for provided content",
-      "Basic performance tracking"
-    ]
+      "Basic performance tracking",
+    ],
   },
   {
     name: "Gold",
@@ -133,8 +139,8 @@ const socialMediaTiers: PricingTier[] = [
       "10 posts per month",
       "Caption generation for provided content",
       "Content calendar planning",
-      "Monthly performance report"
-    ]
+      "Monthly performance report",
+    ],
   },
   {
     name: "Bronze",
@@ -146,9 +152,9 @@ const socialMediaTiers: PricingTier[] = [
       "Caption generation for provided content",
       "Content strategy development",
       "Engagement monitoring and response",
-      "Detailed analytics and reporting"
-    ]
-  }
+      "Detailed analytics and reporting",
+    ],
+  },
 ];
 
 const minutesTakingTiers: PricingTier[] = [
@@ -161,9 +167,9 @@ const minutesTakingTiers: PricingTier[] = [
       "Transcription of audio/video recordings",
       "Editing and formatting of documents",
       "Quick turnaround times",
-      "Confidentiality assured"
-    ]
-  }
+      "Confidentiality assured",
+    ],
+  },
 ];
 
 const personalAssistantTiers: PricingTier[] = [
@@ -177,20 +183,37 @@ const personalAssistantTiers: PricingTier[] = [
       "Travel arrangements",
       "Personal errands and tasks",
       "Project coordination",
-      "Customized support based on individual needs"
-    ]
-  }
+      "Customized support based on individual needs",
+    ],
+  },
 ];
 
-const PricingSection = ({ title, tiers }: { title: string; tiers: PricingTier[] }) => (
+const PricingSection = ({
+  title,
+  tiers,
+}: {
+  title: string;
+  tiers: PricingTier[];
+}) => (
   <div className="mb-32">
-    <h2 className="text-3xl font-bold text-center text-secondary mb-8">{title}</h2>
+    <h2 className="text-3xl font-bold text-center text-secondary mb-8">
+      {title}
+    </h2>
     <div className="grid md:grid-cols-3 gap-8">
       {tiers.map((tier, index) => (
-        <Card key={index} className={`flex flex-col ${index === 1 ? 'border-secondary border-2' : ''}`}>
+        <Card
+          key={index}
+          className={`flex flex-col ${
+            index === 1 ? "border-secondary border-2" : ""
+          }`}
+        >
           <CardHeader>
-            <CardTitle className="text-2xl text-secondary">{tier.name}</CardTitle>
-            <CardDescription className="text-xl font-bold">{tier.price}</CardDescription>
+            <CardTitle className="text-2xl text-secondary">
+              {tier.name}
+            </CardTitle>
+            <CardDescription className="text-xl font-bold">
+              {tier.price}
+            </CardDescription>
           </CardHeader>
           <CardContent className="flex-grow">
             <p className="mb-4 text-gray-600">{tier.description}</p>
@@ -204,8 +227,10 @@ const PricingSection = ({ title, tiers }: { title: string; tiers: PricingTier[] 
             </ul>
           </CardContent>
           <div className="p-6 mt-auto">
-            <Button className="w-full text-white border-2 hover:bg-white 
-            hover:border-primary hover:text-secondary">
+            <Button
+              className="w-full text-white border-2 hover:bg-white 
+            hover:border-primary hover:text-secondary"
+            >
               Get Started
             </Button>
           </div>
@@ -238,17 +263,45 @@ const ComprehensiveServicesPricing = () => {
         </div>
       </div>
 
-      <div className="container mx-auto py-12 px-4 relative z-10">
-        <h1 className="text-4xl font-bold text-center mb-20">
-          My Comprehensive <br/>
-          <span className='text-primary'>Services Pricing</span>
+      <div className="container mx-auto py-12 px-4 relative z-10 text-center mb-16">
+        <h1 className="text-6xl font-extrabold text-gray-900 mb-20 mt-10 relative inline-block">
+          <span className="relative z-10">My Comprehensive</span> <br />
+          <span className="relative z-10 text-primary"> Services Pricing</span>
+          <svg
+            className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
+            viewBox="0 0 100 10"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0"
+              fill="currentColor"
+            ></path>
+          </svg>
         </h1>
-        <PricingSection title="Social Media Management Pricing" tiers={socialMediaTiers} />
-        <PricingSection title="Website Development Pricing" tiers={websitePricingTiers} />
-        <PricingSection title="Email Management Pricing" tiers={emailPricingTiers} />
-        <PricingSection title="Customer Service & Support Pricing" tiers={customerServiceTiers} />
-        <PricingSection title="Minutes Taking and Transcription Pricing" tiers={minutesTakingTiers} />
-        <PricingSection title="Personal Assistant Pricing" tiers={personalAssistantTiers} />
+        <PricingSection
+          title="Social Media Management Pricing"
+          tiers={socialMediaTiers}
+        />
+        <PricingSection
+          title="Website Development Pricing"
+          tiers={websitePricingTiers}
+        />
+        <PricingSection
+          title="Email Management Pricing"
+          tiers={emailPricingTiers}
+        />
+        <PricingSection
+          title="Customer Service & Support Pricing"
+          tiers={customerServiceTiers}
+        />
+        <PricingSection
+          title="Minutes Taking and Transcription Pricing"
+          tiers={minutesTakingTiers}
+        />
+        <PricingSection
+          title="Personal Assistant Pricing"
+          tiers={personalAssistantTiers}
+        />
       </div>
     </div>
   );

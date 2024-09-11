@@ -13,7 +13,6 @@ import {
   Phone,
   Instagram,
   Twitter,
-  Facebook,
   Linkedin,
 } from "lucide-react";
 
@@ -69,9 +68,10 @@ const Contact = () => {
   ];
 
   const socialMedia = [
-    { icon: Instagram, link: "https://www.instagram.com/hannah_faab" },
-    { icon: Twitter, link: "https://twitter.com" },
-    { icon: Facebook, link: "https://facebook.com" },
+    { icon: Instagram, 
+      link: "https://www.instagram.com/hannah_faab" },
+    { icon: Twitter, 
+      link: "https://twitter.com" },
     {
       icon: Linkedin,
       link: "https://www.linkedin.com/in/hannah-olafayo-b093242b3",
