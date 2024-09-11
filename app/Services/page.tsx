@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import Faq from "../_components/Faq";
+import Link from "next/link";
 
 
 interface Service {
@@ -42,7 +43,7 @@ const services: Service[] = [
   {
     title: "Email & Diary Management",
     description: "Reclaim your time with our expert email and calendar management services.",
-    icon: "/emailsupport.svg",
+    icon: "/email.svg",
     color: "bg-blue-100",
     textColor: "text-blue-600",
     features: [
@@ -134,32 +135,100 @@ const services: Service[] = [
     ]
   },
   {
-    title: "Personal Assistant",
-    description: "Enhance your business with comprehensive Software as a Service (SaaS) development, delivering scalable solutions for your specific needs.",
-    icon: "/saas.svg",
-    color: "bg-purple-300",
-    textColor: "text-purple-900",
-    features: [
-      { title: "Custom SaaS Solutions", 
-        description: "Build scalable cloud-based software tailored to your unique business requirements, driving efficiency and growth." },
-
-      { title: "Agile SaaS Development", 
-        description: "Stay ahead with our agile SaaS development, enabling rapid iteration, continuous delivery, and quick adaptation to market changes." },
-
-      { title: "Secure and Scalable SaaS Solutions ",  
-        description: "Ensure business continuity with our secure, robust SaaS solutions, built to industry-leading standards.." },
-
-      { title: "User-Centric Design", 
-        description: "CCreate exceptional experiences with our intuitive, user-focused SaaS designs, offering seamless navigation and personalization.." },
-
-      { title: " Cost-Effective", 
-        description: "Get high-quality SaaS development within your budget, using the latest technologies and best practices." }
+    "title": "Personal Assistant",
+    "description": "I can perfectely assistant you in managing your daily tasks and responsibilities.",
+    "icon": "/saas.svg",
+    "color": "bg-purple-300",
+    "textColor": "text-purple-900",
+    "features": [
+      {
+        "title": "Online Shopping",
+        "description": "Get help with online shopping tasks, from researching products to making purchases."
+      },
+      {
+        "title": "Personal Appointment Scheduling",
+        "description": "Schedule appointments and manage your calendar with ease."
+      },
+      {
+        "title": "Reminder Services For Important Dates",
+        "description": "Stay on top of important dates and deadlines with personalized reminders."
+      },
+      {
+        "title": "Responding To Emails",
+        "description": "Get assistance with managing your inbox and responding to emails."
+      },
+      {
+        "title": "Data Entry",
+        "description": "Get assistance with entering and managing data, including contacts, calendar events, and documents."
+      }
     ]
   }
 ];
 
+const AnimatedBackground = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <svg
+      className="absolute w-full h-full"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ff9a9e" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fad0c4" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#a18cd1" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fbc2eb" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#84fab0" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#8fd3f4" stopOpacity="0.5" />
+        </linearGradient>
+      </defs>
+      
+      <path fill="url(#grad1)">
+        <animate
+          attributeName="d"
+          dur="20s"
+          repeatCount="indefinite"
+          values="
+            M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z;
+            M0,25 C25,0 75,0 100,25 L100,100 L0,100 Z;
+            M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z"
+        />
+      </path>
+      
+      <path fill="url(#grad2)">
+        <animate
+          attributeName="d"
+          dur="23s"
+          repeatCount="indefinite"
+          values="
+            M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z;
+            M0,0 C50,25 50,0 100,0 L100,100 L0,100 Z;
+            M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z"
+        />
+      </path>
+      
+      <path fill="url(#grad3)">
+        <animate
+          attributeName="d"
+          dur="25s"
+          repeatCount="indefinite"
+          values="
+            M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z;
+            M0,50 C50,25 50,0 100,0 L100,100 L0,100 Z;
+            M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z"
+        />
+      </path>
+    </svg>
+  </div>
+);
+
 const ServiceCard: React.FC<Service> = ({ title, description, icon, color, textColor, features }) => (
-  <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
+  <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col bg-white bg-opacity-90">
     <CardHeader className={`${color} p-6 rounded-t-lg`}>
       <div className="flex items-center space-x-4">
         <img src={icon} alt={`${title} icon`} className="w-16 h-16" />
@@ -181,44 +250,48 @@ const ServiceCard: React.FC<Service> = ({ title, description, icon, color, textC
         ))}
       </ul>
     </CardContent>
-    {/* <CardFooter className="p-6">
-    <Button className={`w-full ${textColor.replace('text', 'bg')} hover:${textColor.replace('text', 'bg')}-dark text-white`}>
-      Book Me Now
-    </Button>
-  </CardFooter> */}
   </Card>
 );
 
 const ServicePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
-              Elevate Your <span className="text-primary">Business Strategy</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Unlock your potential with our comprehensive suite of professional services, tailored to streamline operations and catalyze growth.
-            </p>
+    <div className="relative">
+      <AnimatedBackground />
+      <div className="relative z-10">
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+            <h1 className="text-6xl font-extrabold text-gray-900 mb-4 relative inline-block">
+                <span className="relative z-10">Elevate Your</span>
+                <span className="relative z-10 text-primary"> Business Strategy</span>
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0" fill="currentColor"></path>
+                </svg>
+              </h1>
+              <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                Unlock your potential with our comprehensive suite of professional services, tailored to streamline operations and catalyze growth.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <ServiceCard key={index} {...service} />
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
-            ))}
+        </section>
+        <section className="py-16 bg-secondary">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-8 text-white">Ready to Transform Your Business?</h2>
+            <Link href="BookMe">
+            <Button size="lg" className="px-8 py-3 text-lg bg-white text-primary hover:bg-gray-100">
+              Book Me Now
+            </Button>
+            </Link>
+            
           </div>
-        </div>
-      </section>
-      <section className="py-16 bg-gradient-to-r from-primary to-primary-dark text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Business?</h2>
-          <Button size="lg" className="px-8 py-3 text-lg bg-white text-primary hover:bg-gray-100">
-            Book Me Now
-          </Button>
-        </div>
-      </section>
-
-      <Faq/>
+        </section>
+        <Faq />
+      </div>
     </div>
   );
 };

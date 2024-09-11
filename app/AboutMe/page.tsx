@@ -24,31 +24,74 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+
+const AnimatedBackground = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <svg
+      className="absolute w-full h-full"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ff9a9e" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fad0c4" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#a18cd1" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fbc2eb" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#84fab0" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#8fd3f4" stopOpacity="0.5" />
+        </linearGradient>
+      </defs>
+      
+      <path fill="url(#grad1)">
+        <animate
+          attributeName="d"
+          dur="20s"
+          repeatCount="indefinite"
+          values="
+            M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z;
+            M0,25 C25,0 75,0 100,25 L100,100 L0,100 Z;
+            M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z"
+        />
+      </path>
+      
+      <path fill="url(#grad2)">
+        <animate
+          attributeName="d"
+          dur="23s"
+          repeatCount="indefinite"
+          values="
+            M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z;
+            M0,0 C50,25 50,0 100,0 L100,100 L0,100 Z;
+            M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z"
+        />
+      </path>
+      
+      <path fill="url(#grad3)">
+        <animate
+          attributeName="d"
+          dur="25s"
+          repeatCount="indefinite"
+          values="
+            M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z;
+            M0,50 C50,25 50,0 100,0 L100,100 L0,100 Z;
+            M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z"
+        />
+      </path>
+    </svg>
+  </div>
+);
+
 function AboutMePage() {
   return (
-    <div className="relative bg-gradient-to-r from-purple-50 to-pink-50 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"
-              style={{
-                backgroundColor: `hsl(${Math.random() * 360}, 70%, 80%)`,
-                top: `${Math.random() * 50}%`,
-                left: `${Math.random() * 80}%`,
-                width: `${Math.random() * 10 + 5}%`,
-                height: `${Math.random() * 10 + 5}%`,
-                animationDelay: `${Math.random() * 10}s`,
-                animationDuration: `${Math.random() * 10 + 10}s`,
-              }}
-            ></div>
-          ))}
-        </div>
-      </div>
-
-      <div className="">
+    <div className="relative">
+      <AnimatedBackground />
+      <div className="relative z-10">
         <section className="text-center mt-20">
           <div className="container mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">
@@ -65,19 +108,15 @@ function AboutMePage() {
         <section>
           <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2 gap-8">
-              <div className="relative">
-                <div className="absolute inset-0 h-full w-full">
-                  <img
-                    alt="faabvs ceo"
-                    src="/Faabvs-ceo.png"
-                    className="w-full h-full object-cover object-center"
-                  />
-                  <div className="relative z-10 flex items-center justify-end">
-                    <div className="absolute bottom-0 right-0 bg-primary text-white p-6 rounded-tl-lg">
-                      <p className="text-2xl font-bold">3+ Years</p>
-                      <p>of Experience</p>
-                    </div>
-                  </div>
+              <div className="relative h-80 lg:h-auto">
+                <img
+                  alt="faabvs ceo"
+                  src="/Faabvs-ceo.png"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+                <div className="absolute bottom-0 right-0 bg-primary text-white p-6 rounded-tl-lg">
+                  <p className="text-2xl font-bold">3+ Years</p>
+                  <p>of Experience</p>
                 </div>
               </div>
 
@@ -126,7 +165,7 @@ function AboutMePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Customer Support",
+                  title: "Customer Service & Support",
                   icon: Headphones,
                   description:
                     "Providing excellent customer service via multiple channels.",
@@ -156,10 +195,10 @@ function AboutMePage() {
                     "Creating and maintaining responsive, user-friendly websites.",
                 },
                 {
-                  title: "SaaS Development",
+                  title: "Personal Assistant",
                   icon: Briefcase,
                   description:
-                    "Developing and implementing Software as a Service solutions.",
+                    "managing your daily tasks and responsibilities.",
                 },
               ].map((service, index) => (
                 <div
