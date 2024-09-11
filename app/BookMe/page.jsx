@@ -42,8 +42,8 @@ const BookMeContactPage = () => {
       <div className="container mx-auto p-4 relative z-10">
         <section className="text-center mt-10">
           <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-extrabold text-gray-900 mb-20 mt-10 relative inline-block">
-          <span className="relative z-10">Book me now for exceptional</span> <br />
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-20 mt-10 relative inline-block">
+          <span className="relative z-10">Book now for exceptional</span> <br />
           <span className="relative z-10 text-primary"> service and collaboration.</span>
           <svg
             className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
