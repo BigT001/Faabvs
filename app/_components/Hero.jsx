@@ -14,49 +14,83 @@ function Hero() {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Updated professional background */}
+      {/* Background SVG */}
       <div className="absolute inset-0 w-full h-full">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="w-full h-full"
-        >
-          <defs>
-            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop
-                offset="0%"
-                style={{ stopColor: "#d49af5", stopOpacity: 1 }}
-              />
-              <stop
-                offset="100%"
-                style={{ stopColor: "#e9ecef", stopOpacity: 1 }}
-              />
-            </linearGradient>
-          </defs>
-          <rect width="100" height="100" fill="url(#grad1)" />
-          <circle cx="0" cy="0" r="60" fill="#007bff" fillOpacity="0.1" />
-          <circle cx="100" cy="100" r="40" fill="#6610f2" fillOpacity="0.1" />
-          <polygon
-            points="0,100 100,0 100,100"
-            fill="#28a745"
-            fillOpacity="0.05"
-          />
-          <path
-            d="M0 70 Q 50 50 100 80 L 100 100 L 0 100 Z"
-            fill="#dc3545"
-            fillOpacity="0.05"
-          />
-        </svg>
+      <svg
+      className="absolute w-full h-full"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ff9a9e" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fad0c4" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#a18cd1" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fbc2eb" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#84fab0" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#8fd3f4" stopOpacity="0.5" />
+        </linearGradient>
+      </defs>
+      
+      <path fill="url(#grad1)">
+        <animate
+          attributeName="d"
+          dur="20s"
+          repeatCount="indefinite"
+          values="
+            M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z;
+            M0,25 C25,0 75,0 100,25 L100,100 L0,100 Z;
+            M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z"
+        />
+      </path>
+      
+      <path fill="url(#grad2)">
+        <animate
+          attributeName="d"
+          dur="23s"
+          repeatCount="indefinite"
+          values="
+            M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z;
+            M0,0 C50,25 50,0 100,0 L100,100 L0,100 Z;
+            M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z"
+        />
+      </path>
+      
+      <path fill="url(#grad3)">
+        <animate
+          attributeName="d"
+          dur="25s"
+          repeatCount="indefinite"
+          values="
+            M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z;
+            M0,50 C50,25 50,0 100,0 L100,100 L0,100 Z;
+            M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z"
+        />
+      </path>
+    </svg>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-10">
-        <div className="text-4xl font-bold text-white bg-secondary md:max-w-96 lg:text-center text-center md:text-center">
-          Faab Virtual Solutions
+        
+        {/* Mobile version - now at the top */}
+        <div className="md:hidden text-center mb-6">
+          <div className="text-4xl font-bold text-white mb-4 bg-secondary">
+            FAAB Virtual Solutions.
+          </div>
+          <h1 className="text-5xl sm:text-3xl font-bold text-black mb-4">
+            Elevate Your <span className="bg-secondary text-white">Business</span> <br />
+            With An <span className="bg-secondary text-white">Expert</span> Virtual Assistance
+          </h1>
         </div>
+
         <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
-          <div className="relative w-full h-screen md:h-[500px] lg:h-[550px] order-1 md:order-2">
+          <div className="relative w-full h-[90vh] md:h-[500px] lg:h-[550px] order-1 md:order-2">
             <div className="relative w-full h-full transform hover:scale-105 transition-transform duration-300">
               <Image
                 src="/Faabvs-ceo.png"
@@ -65,49 +99,23 @@ function Hero() {
                 objectFit="cover"
                 className="rounded-lg transform scale-x-[-1] shadow-2xl brightness-105 contrast-95"
               />
-
-              {/*mobile and tablet */}
-              <div className="bg-white/70 absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t  to-transparent md:hidden">
-                <h1 className="text-3xl sm:text-3xl font-bold text-black text-center mb-4">
-                  Elevate Your <span className="text-secondary">Business</span>{" "}
-                  <br />
-                  With An Expert Virtual Assistance
-                </h1>
-                <svg
-                  className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
-                  viewBox="0 0 100 10"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                <p className="text-xl text-black text-center">
-                  I help entrepreneurs and businesses save time and boost
-                  productivity with top-notch virtual assistant services.
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Large device */}
-          <div className="order-2 md:order-1 mt-10 md:mt-0">
-            <h1 className="hidden md:block text-4xl md:text-5xl font-bold text-black mb-6">
-              Elevate Your <span className="text-secondary">Business</span> With An {" "}
-              <span className="text-secondary">Expert</span> Virtual Assistance
-            </h1>
-            <svg
-              className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
-              viewBox="0 0 100 10"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0"
-                fill="currentColor"
-              ></path>
-            </svg>
-            <p className="hidden md:block text-xl text-black mb-8">
+          {/* Content Section */}
+          <div className="order-2 md:order-1 mt-0 md:mt-0">
+            {/* Desktop version */}
+            <div className="hidden md:block relative">
+              <div className="text-2xl font-bold text-secondary absolute -top-8 left-0 z-10">
+                FAAB Virtual Solutions.
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 relative z-0">
+                Elevate Your <span className="text-secondary">Business</span> With An {" "}
+                <span className="text-secondary">Expert</span> Virtual Assistance
+              </h1>
+            </div>
+
+            <p className="text-xl text-black mb-8">
               I help entrepreneurs and businesses save time and boost
               productivity with top-notch virtual assistant services.
             </p>
@@ -131,7 +139,7 @@ function Hero() {
               </Link>
             </div>
 
-            <div className="flex flex-row flex-wrap gap-6">
+            <div className="flex flex-row  gap-4 mb-8 w-full justify-center md:justify-start">
               <div className="flex items-center">
                 <Clock className="text-primary mr-2" size={20} />
                 <span className="text-gray-700 whitespace-nowrap">
@@ -155,11 +163,8 @@ function Hero() {
         </div>
       </div>
 
-      {/* Spacing div to create gap */}
-      <div className="lg:hidden h-20 md:h-24"></div>
-
       {/* Infinity Testimony Scroll */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden py-4 bg-white/50 backdrop-blur-sm">
+      <div className=" bottom-0 left-0 right-0 overflow-hidden py-4 bg-white/50 backdrop-blur-sm">
         <div className="flex animate-scroll">
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div

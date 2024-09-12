@@ -9,12 +9,13 @@ const navItems = [
   { name: 'Services', path: '/Services' },
   { name: 'Prices', path: '/Pricing' },
   { name: 'Book Me', path: '/BookMe' },
+  { name: 'Privacy Policy',  path: '/Document/PrivacyPolicy.docx.pdf'},
 ];
 
 const socialMediaLinks = [
-  { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/your-profile' },
+  { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/hannah_faab' },
+  { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://www.linkedin.com/in/hannah-olafayo-b093242b3/' },
   { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/your-profile' },
-  { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://www.linkedin.com/in/your-profile' },
 ];
 
 export default function Footer() {
@@ -38,7 +39,7 @@ export default function Footer() {
           <ul className="grid gap-4 sm:flex justify-center items-center sm:space-x-8">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link href={item.path} className="text-gray-800 hover:text-purple-700 transition duration-300">
+                <Link href={item.path} className="text-gray-800 font-bold hover:text-primary transition duration-300">
                   {item.name}
                 </Link>
               </li>
@@ -65,23 +66,19 @@ export default function Footer() {
         </div>
         
         <div className="mt-8 flex flex-col items-center">
-          <div className="mb-4 w-[150px] h-[150px] bg-black rounded-full flex items-center justify-center overflow-hidden">
+          <div className="mb-4  border border-black rounded-full flex items-center justify-center overflow-hidden">
             <Image
-              src="/exec.png"
-              alt="Executive"
-              width={180}
-              height={180}
-              className="rounded-full object-cover"
+              src="/exec.jpg"
+              alt="Exec logo"
+              width={120}
+              height={120}
+              className=""
             />
           </div>
-          <div className="w-full flex justify-between items-center mt-4">
-            <Link 
-              href="/Document/PrivacyPolicy.docx.pdf" 
-              className="text-sm text-gray-600 hover:text-purple-700 transition duration-300">
-              Privacy Policy
-            </Link>
+          <div className="items-center mt-4">
+            
             <p className="text-sm text-gray-600 text-center">
-              Copyright &copy; Faabvs {new Date().getFullYear()}. All rights reserved.
+              Copyright &copy; FAABvs {new Date().getFullYear()}. All rights reserved.
             </p>
           </div>
         </div>

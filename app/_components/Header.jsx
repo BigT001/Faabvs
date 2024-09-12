@@ -41,15 +41,21 @@ function Header() {
 
   return (
     <div
-      className={`fixed w-full z-50 transition-all duration-300 h-16  ${
+      className={`fixed w-full z-50 transition-all duration-300 h-20  ${
         isScrolled ? "bg-white/70 backdrop-blur-md border-b" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
+      <div className="max-w-7xl mx-auto p sm:px-6 lg:px-4">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/" onClick={handleItemClick}>
-              <h1 className="font-bold text-secondary text-xl">Faabvs.</h1>
+            <img
+              src="Faabvs-Logo.png"
+              alt="Exec logo"
+              width={80}
+              height={80}
+              className=""
+            />
             </Link>
           </div>
 
