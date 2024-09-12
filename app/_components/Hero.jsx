@@ -78,7 +78,7 @@ function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-10">
         {/* Mobile version - now at the top */}
         <div className="md:hidden text-center mb-6">
-          <div className="text-4xl font-bold text-white mb-4 bg-secondary">
+          <div className="text-3xl font-bold text-white mb-4 bg-secondary">
             <p className="">FAAB Virtual Solutions.</p>
           </div>
           <h1 className="text-4xl sm:text-3xl font-bold text-black mb-4">
@@ -118,7 +118,7 @@ function Hero() {
               </h1>
             </div>
 
-            <p className="text-xl text-black mb-8 lg:px-0 px-14">
+            <p className="text-xl text-black mb-8 lg:px-0 px-8">
               I help entrepreneurs and businesses save time and boost
               productivity with top-notch virtual assistant services.
             </p>
