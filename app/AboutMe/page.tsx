@@ -94,7 +94,7 @@ function AboutMePage() {
       <div className="relative z-10">
         <section className="text-center mt-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-3xl lg:text-5xl font-bold mb-4">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Welcome I am Hannah <br />
               <span className="text-secondary">Your Professional virtual Assistant</span>
             </h1>

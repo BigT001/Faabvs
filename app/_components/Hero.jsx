@@ -82,7 +82,7 @@ function Hero() {
           <div className="text-4xl font-bold text-white mb-4 bg-secondary">
             FAAB Virtual Solutions.
           </div>
-          <h1 className="text-5xl sm:text-3xl font-bold text-black mb-4">
+          <h1 className="text-4xl sm:text-3xl font-bold text-black mb-4">
             Elevate Your <span className="bg-secondary text-white">Business</span> <br />
             With An <span className="bg-secondary text-white">Expert</span> Virtual Assistance
           </h1>
@@ -106,16 +106,16 @@ function Hero() {
           <div className="order-2 md:order-1 mt-0 md:mt-0">
             {/* Desktop version */}
             <div className="hidden md:block relative">
-              <div className="text-2xl font-bold text-secondary absolute -top-8 left-0 z-10">
+              <div className="text-3xl font-bold text-secondary absolute -top-8 left-0 z-10">
                 FAAB Virtual Solutions.
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 relative z-0">
-                Elevate Your <span className="text-secondary">Business</span> With An {" "}
-                <span className="text-secondary">Expert</span> Virtual Assistance
+              <h1 className="text-4xl pt-6 md:text-5xl font-bold text-secondary mb-6 relative z-0">
+                Elevate Your <span className="bg-secondary text-white">Business</span> With An {" "}
+                <span className="bg-secondary text-white">Expert</span> Virtual Assistance
               </h1>
             </div>
 
-            <p className="text-xl text-black mb-8">
+            <p className="text-xl text-black mb-8 lg:px-0 px-7">
               I help entrepreneurs and businesses save time and boost
               productivity with top-notch virtual assistant services.
             </p>
