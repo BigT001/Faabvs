@@ -91,20 +91,26 @@ function AboutMePage() {
   return (
     <div className="relative">
       <AnimatedBackground />
-      <div className="relative z-10">
-        <section className="text-center mt-20">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-              Welcome I am Hannah <br />
-              <span className="text-secondary">Your Professional virtual Assistant</span>
-            </h1>
-            <p className="text-xl">
+      <div className="container mx-auto py-12 px-4 relative z-10 text-center mb-16">
+      <h1 className="text-5xl font-extrabold text-gray-900 mb-5 mt-10 relative inline-block">
+          <span className="relative z-10">Welcone I Am Hannah</span> <br />
+          <span className="relative z-10 text-primary">Your Expert Virtual Assistant</span>
+          <svg
+            className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
+            viewBox="0 0 100 10"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </h1>
+        <p className="text-xl">
               Experienced Customer support | Email Manager | Social Media | Personal Assistant |
               Website Development
             </p>
-          </div>
-        </section>
-
+       
         <section className="relative">
           <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

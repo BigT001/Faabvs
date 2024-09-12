@@ -13,7 +13,7 @@ function Hero() {
   ];
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden mt-10">
       {/* Background SVG */}
       <div className="absolute inset-0 w-full h-full">
         <svg
