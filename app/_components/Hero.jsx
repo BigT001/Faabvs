@@ -16,75 +16,76 @@ function Hero() {
     <div className="relative overflow-hidden">
       {/* Background SVG */}
       <div className="absolute inset-0 w-full h-full">
-      <svg
-      className="absolute w-full h-full"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-    >
-      <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#ff9a9e" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#fad0c4" stopOpacity="0.5" />
-        </linearGradient>
-        <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#a18cd1" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#fbc2eb" stopOpacity="0.5" />
-        </linearGradient>
-        <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#84fab0" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#8fd3f4" stopOpacity="0.5" />
-        </linearGradient>
-      </defs>
-      
-      <path fill="url(#grad1)">
-        <animate
-          attributeName="d"
-          dur="20s"
-          repeatCount="indefinite"
-          values="
+        <svg
+          className="absolute w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#ff9a9e" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#fad0c4" stopOpacity="0.5" />
+            </linearGradient>
+            <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#a18cd1" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#fbc2eb" stopOpacity="0.5" />
+            </linearGradient>
+            <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#84fab0" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#8fd3f4" stopOpacity="0.5" />
+            </linearGradient>
+          </defs>
+
+          <path fill="url(#grad1)">
+            <animate
+              attributeName="d"
+              dur="20s"
+              repeatCount="indefinite"
+              values="
             M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z;
             M0,25 C25,0 75,0 100,25 L100,100 L0,100 Z;
             M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z"
-        />
-      </path>
-      
-      <path fill="url(#grad2)">
-        <animate
-          attributeName="d"
-          dur="23s"
-          repeatCount="indefinite"
-          values="
+            />
+          </path>
+
+          <path fill="url(#grad2)">
+            <animate
+              attributeName="d"
+              dur="23s"
+              repeatCount="indefinite"
+              values="
             M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z;
             M0,0 C50,25 50,0 100,0 L100,100 L0,100 Z;
             M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z"
-        />
-      </path>
-      
-      <path fill="url(#grad3)">
-        <animate
-          attributeName="d"
-          dur="25s"
-          repeatCount="indefinite"
-          values="
+            />
+          </path>
+
+          <path fill="url(#grad3)">
+            <animate
+              attributeName="d"
+              dur="25s"
+              repeatCount="indefinite"
+              values="
             M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z;
             M0,50 C50,25 50,0 100,0 L100,100 L0,100 Z;
             M0,0 C50,0 50,50 100,50 L100,100 L0,100 Z"
-        />
-      </path>
-    </svg>
+            />
+          </path>
+        </svg>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-10">
-        
         {/* Mobile version - now at the top */}
         <div className="md:hidden text-center mb-6">
           <div className="text-4xl font-bold text-white mb-4 bg-secondary">
-            FAAB Virtual Solutions.
+            <p className="">FAAB Virtual Solutions.</p>
           </div>
           <h1 className="text-4xl sm:text-3xl font-bold text-black mb-4">
-            Elevate Your <span className="bg-secondary text-white">Business</span> <br />
-            With An <span className="bg-secondary text-white">Expert</span> Virtual Assistance
+            Elevate Your{" "}
+            <span className="bg-secondary text-white">Business</span> <br />
+            With An <span className="bg-secondary text-white">Expert</span>{" "}
+            Virtual Assistance
           </h1>
         </div>
 
@@ -106,16 +107,18 @@ function Hero() {
           <div className="order-2 md:order-1 mt-0 md:mt-0">
             {/* Desktop version */}
             <div className="hidden md:block relative">
-              <div className="text-3xl font-bold text-secondary absolute -top-8 left-0 z-10">
-                FAAB Virtual Solutions.
+              <div className="text-4xl font-bold text-secondary absolute -top-8 left-0 z-10">
+                <p className="bg-secondary text-white">FAAB Virtual Solutions.</p>
               </div>
               <h1 className="text-4xl pt-6 md:text-5xl font-bold text-secondary mb-6 relative z-0">
-                Elevate Your <span className="bg-secondary text-white">Business</span> With An {" "}
-                <span className="bg-secondary text-white">Expert</span> Virtual Assistance
+                Elevate Your{" "}
+                <span className="bg-secondary text-white">Business</span> With
+                An <span className="bg-secondary text-white">Expert</span>{" "}
+                Virtual Assistance
               </h1>
             </div>
 
-            <p className="text-xl text-black mb-8 lg:px-0 px-7">
+            <p className="text-xl text-black mb-8 lg:px-0 px-14">
               I help entrepreneurs and businesses save time and boost
               productivity with top-notch virtual assistant services.
             </p>
@@ -139,7 +142,7 @@ function Hero() {
               </Link>
             </div>
 
-            <div className="flex flex-row  gap-4 mb-8 w-full justify-center md:justify-start">
+            <div className="lg:flex grid flex-row  gap-4 mb-8 lg:w-full justify-center md:justify-start">
               <div className="flex items-center">
                 <Clock className="text-primary mr-2" size={20} />
                 <span className="text-gray-700 whitespace-nowrap">
