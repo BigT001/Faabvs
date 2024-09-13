@@ -261,8 +261,8 @@ const ComprehensiveServicesPricing = () => {
         </div>
       </div>
 
-      <div className="container mx-auto py-12 px-4 relative z-10 text-center mb-16">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-20 mt-10 relative inline-block">
+      <div className="container mx-auto py-12 px-4 relative z-10 text-center">
+        <h1 className="text-5xl font-extrabold text-gray-900  mt-10 relative inline-block">
           <span className="relative z-10">My Services</span> <br />
           <span className="relative z-10 text-primary">  Pricing</span>
           <svg
@@ -301,6 +301,104 @@ const ComprehensiveServicesPricing = () => {
           tiers={personalAssistantTiers}
         />
       </div>
+
+
+      <div className="flex flex-col px-10 lg:px-20 mb-10 md:flex-row gap-8 items-start">
+      <div className="flex-1">
+        <ul className="space-y-4">
+        <p className="text-xl">
+          <span className="text-md font-bold text-primary">PLEASE NOTE: </span> <br />
+          Utilise the retainer hours within the calendar month of purchase 
+          unless specifically pre-agreed, the hours cannot be rolled over.
+        </p>
+        <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+            Time will be tracked via Toggl.
+            </p>
+          </li>
+
+        <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+            Payments to be made in advance.
+            </p>
+          </li>
+
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+              Invoices are raised at the end of the month for hours worked (50% deposit for
+              new customers for the first month)
+            </p>
+          </li>
+          
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+              Hours to be used in same month and cannot be rolled over.
+            </p>
+          </li>
+          
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+              1 month notice period to terminate by both parties
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div className="flex-1">
+        <p className="text-xl">
+          Hours are tracked using time-tracking software and 
+          I am fully insured and registered with the Information 
+          Commissioner's Office (ICO) for Data Protection purposes.
+          That's it! No hidden charges or additional fees. You don't 
+          pay for  
+          <ul className="space-y-2">
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+              national insurance 
+            </p>
+          </li>
+          
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+             taxes 
+            </p>
+          </li>
+          
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+              pension
+            </p>
+          </li>
+
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+            sick pay
+            </p>
+          </li>
+
+          <li className="flex items-start gap-2">
+            <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
+            <p className="text-xl">
+            or even my lunch break...
+            </p>
+          </li>
+        </ul> 
+           all you pay for is my complete, undivided 
+          attention when you need it!
+        </p>
+      </div>
+      
+      
+    </div>
     </div>
   );
 };

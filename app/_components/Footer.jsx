@@ -66,9 +66,9 @@ export default function Footer() {
         </div>
         
         <div className="mt-8 flex flex-col items-center">
-          <div className="mb-4  border border-black rounded-full flex items-center justify-center overflow-hidden">
+          <div className="mb-4 flex items-center justify-center overflow-hidden">
             <Image
-              src="/exec.jpg"
+              src="/Faabvs-Logo.png"
               alt="Exec logo"
               width={120}
               height={120}
