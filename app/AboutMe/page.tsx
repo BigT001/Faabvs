@@ -93,7 +93,7 @@ function AboutMePage() {
       <AnimatedBackground />
       <div className="container mx-auto py-12 px-4 relative z-10 text-center mb-16">
       <h1 className="text-5xl font-extrabold text-gray-900 mb-5 mt-10 relative inline-block">
-          <span className="relative z-10">Welcone I Am Hannah</span> <br />
+          <span className="relative z-10">Welcome, I Am Hannah</span> <br />
           <span className="relative z-10 text-primary">Your Expert Virtual Assistant</span>
           <svg
             className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
@@ -128,11 +128,11 @@ function AboutMePage() {
 
               <Card className="relative flex flex-col justify-between shadow-xl border-primary lg:mt-0 -mt-16">
                 <CardHeader>
-                  <CardTitle className="text-3xl font-bold text-secondary lg:px-10">
+                  <CardTitle className="text-3xl text-start font-bold text-secondary lg:px-10">
                     I am...
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow lg:px-16">
+                <CardContent className="flex-grow text-start lg:px-16">
                   <p className="text-xl text-gray-600 mb-3">
                     an enthusiastic, competent, and hardworking professional
                     with over 3 years of experience delivering excellent

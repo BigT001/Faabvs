@@ -65,28 +65,26 @@ const websitePricingTiers: PricingTier[] = [
 
 const emailPricingTiers: PricingTier[] = [
   {
-    name: "Basic Email Management",
-    price: "Starting at £120",
-    description: "Essential email services for busy professionals",
+    name: "EMAIL DETOX",
+    price: "£120 one-off fee",
+    description: "NB: Fee is for a maximum of 3 hours.",
     features: [
-      "One-off email detox: £120",
-      "Email maintenance: £30 per hour",
-      "Email & calendar management: £35 per hour (min. 2hrs/week)",
-      "Minutes taking and transcription: £30 per hour",
+      "Login to the specified email account",
+      "Organize the inbox into folders",
+      "Delete spam and old emails",
+      "Set up new folders and categorize some of the emails",
     ],
   },
   {
-    name: "Monthly Retainer",
-    price: "Starting at £150/month",
-    description: "Ongoing email management support",
+    name: "Pay as you go £35 per hour ( no additional cost. Only pay for hours used)",
+    price: "MONTHLY RETAINER",
+    description: "Minimum of 5hrs per month at £30 per hour. Packages ranges from 5-40hrs per month. ",
     features: [
-      "Minimum of 5 hours per month at £30/hour",
-      "5 hours: £150/month",
-      "10 hours: £300/month",
-      "20 hours: £600/month",
-      "40 hours: £1,200/month",
-      "Flexible scheduling",
-      "Priority support",
+      
+      "5 hours - £150",
+      "10 hours - £300",
+      "20 hours - £600",
+      "40 hours - £1,200",
     ],
   },
 ];

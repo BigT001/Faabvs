@@ -3,12 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import Credentials from "./_components/Credentials";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Faabvs - Virtual Assistant Services - Executive Virtual Assistant",
-  description: "Professional virtual assistant services to help you save time and boost productivity.",
+  description:
+    "Professional virtual assistant services to help you save time and boost productivity.",
 };
 
 export default function RootLayout({
@@ -20,10 +22,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="pt-16"> {/* Add padding-top here */}
+        <main className="pt-16">
+          {" "}
+          {/* Add padding-top here */}
           {children}
         </main>
-        <Footer/>
+
+        <Credentials />
+        <Footer />
       </body>
     </html>
   );
