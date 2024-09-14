@@ -113,7 +113,7 @@ function AboutMePage() {
         </p>
 
         <section className="relative">
-      <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen-2xl px-4 lg:mt-16 mb-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="relative h-[500px] lg:h-screen">
             <img
@@ -121,7 +121,7 @@ function AboutMePage() {
               src="/Faabvs-ceo.png"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
-            <div className="absolute bottom-7 right-0 bg-primary text-white p-4 lg:p-6 rounded-tl-lg">
+            <div className="absolute lg:bottom-0 bottom-7 right-0 bg-primary text-white p-4 lg:p-6 rounded-tl-lg">
               <p className="text-xl lg:text-2xl font-bold">3+ Years</p>
               <p>of Experience</p>
             </div>
