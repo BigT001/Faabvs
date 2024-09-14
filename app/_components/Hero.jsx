@@ -81,6 +81,17 @@ function Hero() {
           <div className="text-3xl font-bold text-white mb-4 bg-secondary">
             <p className="">FAAB Virtual Solutions.</p>
           </div>
+          <svg
+            className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
+            viewBox="0 0 100 10"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 10 C 30 4 70 4 100 10 L 100 0 L 0 0"
+              fill="currentColor"
+            ></path>
+          </svg>
+          
           <h1 className="text-5xl sm:text-3xl font-bold text-black mb-4">
             Elevate Your{" "}
             <span className="bg-secondary text-white">Business</span> <br />

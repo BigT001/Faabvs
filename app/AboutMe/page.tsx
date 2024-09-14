@@ -119,7 +119,7 @@ function AboutMePage() {
                 <img
                   alt="faabvs ceo"
                   src="/Faabvs-ceo.png"
-                  className="absolute inset-0  h-full object-cover object-center lg:bottom-0"
+                  className="absolute inset-0 lg:w-full lg:h-full lg:object-cover object-center lg:bottom-0"
                 />
                 <div className="absolute bottom-7 lg:bottom-0 right-0 bg-primary text-white p-6 rounded-tl-lg">
                   <p className="text-2xl font-bold">3+ Years</p>
