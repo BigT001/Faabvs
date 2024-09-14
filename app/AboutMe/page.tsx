@@ -113,54 +113,53 @@ function AboutMePage() {
         </p>
 
         <section className="relative">
-          <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="relative h-screen lg:">
-                <img
-                  alt="faabvs ceo"
-                  src="/Faabvs-ceo.png"
-                  className="absolute inset-0 lg:w-full lg:h-full lg:object-cover object-center lg:bottom-0"
-                />
-                <div className="absolute bottom-7 lg:bottom-0 right-0 bg-primary text-white p-6 rounded-tl-lg">
-                  <p className="text-2xl font-bold">3+ Years</p>
-                  <p>of Experience</p>
-                </div>
-              </div>
+      <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="relative h-[300px] lg:h-screen">
+            <img
+              alt="faabvs ceo"
+              src="/Faabvs-ceo.png"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            <div className="absolute bottom-0 right-0 bg-primary text-white p-4 lg:p-6 rounded-tl-lg">
+              <p className="text-xl lg:text-2xl font-bold">3+ Years</p>
+              <p>of Experience</p>
+            </div>
+          </div>
 
-              <Card className="relative flex flex-col justify-between shadow-xl 
-              border-primary lg:mt-0 -mt-16 w-full">
-                <CardHeader>
-                  <CardTitle className="text-3xl text-start font-bold text-secondary lg:px-10">
-                    I am...
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow text-start w-full">
-                  <p className="text-xl text-gray-600 mb-3">
-                    an enthusiastic, competent, and hardworking professional
-                    with over 3 years of experience delivering excellent
-                    customer service. My expertise lies in creating strong
-                    rapport with customers through various communication
-                    channels. With a keen eye for detail and a commitment to
-                    enhancing customer satisfaction.
-                  </p>
-                  <p className="text-lg text-gray-600">
-                    I excel in managing customer inquiries, resolving issues,
-                    and ensuring a seamless experience. My experience with
-                    e-commerce giants like IKEA and EON NEXT ENERGY has honed my
-                    skills in building strong bonds between brands and their
-                    clients.
-                  </p>
-                </CardContent>
-                <CardFooter className="pt-4">
-                  <Button
-                    className="w-full text-xl border-2 text-white hover:bg-white hover:border-primary hover:text-secondary"
-                    size="lg"
-                    asChild
-                  >
-                    <a href="/BookMe">Book Me Now</a>
-                  </Button>
-                </CardFooter>
-              </Card>
+          <Card className="relative flex flex-col justify-between shadow-xl border-primary w-full lg:mt-0 -mt-16 z-10">
+              <CardHeader>
+                <CardTitle className="text-2xl lg:text-3xl text-start font-bold text-secondary lg:px-10">
+                  I am...
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow text-start w-full">
+                <p className="text-lg lg:text-xl text-gray-600 mb-3">
+                  an enthusiastic, competent, and hardworking professional
+                  with over 3 years of experience delivering excellent
+                  customer service. My expertise lies in creating strong
+                  rapport with customers through various communication
+                  channels. With a keen eye for detail and a commitment to
+                  enhancing customer satisfaction.
+                </p>
+                <p className="text-base lg:text-lg text-gray-600">
+                  I excel in managing customer inquiries, resolving issues,
+                  and ensuring a seamless experience. My experience with
+                  e-commerce giants like IKEA and EON NEXT ENERGY has honed my
+                  skills in building strong bonds between brands and their
+                  clients.
+                </p>
+              </CardContent>
+              <CardFooter className="pt-4">
+                <Button
+                  className="w-full text-lg lg:text-xl border-2 text-white hover:bg-white hover:border-primary hover:text-secondary"
+                  size="lg"
+                  asChild
+                >
+                  <a href="/BookMe">Book Me Now</a>
+                </Button>
+              </CardFooter>
+            </Card>
             </div>
           </div>
         </section>
