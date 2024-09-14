@@ -24,7 +24,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-
 const AnimatedBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
     <svg
@@ -47,7 +46,7 @@ const AnimatedBackground = () => (
           <stop offset="100%" stopColor="#8fd3f4" stopOpacity="0.5" />
         </linearGradient>
       </defs>
-      
+
       <path fill="url(#grad1)">
         <animate
           attributeName="d"
@@ -59,7 +58,7 @@ const AnimatedBackground = () => (
             M0,0 C25,25 75,25 100,0 L100,100 L0,100 Z"
         />
       </path>
-      
+
       <path fill="url(#grad2)">
         <animate
           attributeName="d"
@@ -71,7 +70,7 @@ const AnimatedBackground = () => (
             M0,25 C50,0 50,50 100,25 L100,100 L0,100 Z"
         />
       </path>
-      
+
       <path fill="url(#grad3)">
         <animate
           attributeName="d"
@@ -92,9 +91,11 @@ function AboutMePage() {
     <div className="relative">
       <AnimatedBackground />
       <div className="container mx-auto py-12 px-4 relative z-10 text-center mb-16">
-      <h1 className="text-5xl font-extrabold text-gray-900 mb-5 mt-10 relative inline-block">
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-5 mt-10 relative inline-block">
           <span className="relative z-10">Welcome, I Am Hannah</span> <br />
-          <span className="relative z-10 text-primary">Your Expert Virtual Assistant</span>
+          <span className="relative z-10 text-primary">
+            Your Expert Virtual Assistant
+          </span>
           <svg
             className="absolute -bottom-2 left-0 w-full h-3 text-primary opacity-30"
             viewBox="0 0 100 10"
@@ -107,10 +108,10 @@ function AboutMePage() {
           </svg>
         </h1>
         <p className="text-xl">
-              Experienced Customer support | Email Manager | Social Media | Personal Assistant |
-              Website Development
-            </p>
-       
+          Experienced Customer support | Email Manager | Social Media | Personal
+          Assistant | Website Development
+        </p>
+
         <section className="relative">
           <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -126,7 +127,8 @@ function AboutMePage() {
                 </div>
               </div>
 
-              <Card className="relative flex flex-col justify-between shadow-xl border-primary lg:mt-0 -mt-16">
+              <Card className="relative flex flex-col justify-between shadow-xl 
+              border-primary lg:mt-0 -mt-16 w-full sm:w-11/12 md:w-10/12 mx-auto">
                 <CardHeader>
                   <CardTitle className="text-3xl text-start font-bold text-secondary lg:px-10">
                     I am...
@@ -150,10 +152,11 @@ function AboutMePage() {
                   </p>
                 </CardContent>
                 <CardFooter className="pt-4">
-                  <Button 
-                    className="w-full text-xl border-2 text-white hover:bg-white
-                     hover:border-primary hover:text-secondary" 
-                    size="lg" asChild>
+                  <Button
+                    className="w-full text-xl border-2 text-white hover:bg-white hover:border-primary hover:text-secondary"
+                    size="lg"
+                    asChild
+                  >
                     <a href="/BookMe">Book Me Now</a>
                   </Button>
                 </CardFooter>
@@ -235,9 +238,19 @@ function AboutMePage() {
                 </h3>
                 <ul className="space-y-3 text-lg">
                   {[
-                    { icon: ClipboardCheck, label: "Excellent communication skills" },
-                    { icon: HardDrive, label: "Proficient in various modern vitual assistant tools" },
-                    { icon: LayoutDashboard, label: "Strong problem-solving abilities" },
+                    {
+                      icon: ClipboardCheck,
+                      label: "Excellent communication skills",
+                    },
+                    {
+                      icon: HardDrive,
+                      label:
+                        "Proficient in various modern vitual assistant tools",
+                    },
+                    {
+                      icon: LayoutDashboard,
+                      label: "Strong problem-solving abilities",
+                    },
                     { icon: Lightbulb, label: "Attention to detail" },
                   ].map((skill, index) => (
                     <li key={index} className="flex items-center">
@@ -256,9 +269,18 @@ function AboutMePage() {
                 <ul className="space-y-3 text-lg">
                   {[
                     { icon: CheckCircle, label: "Reliable and timely" },
-                    { icon: ShieldCheck, label: "Adaptable to changing priorities" },
-                    { icon: ClipboardCheck, label: "Committed to continuous learning" },
-                    { icon: Lightbulb, label: "Passionate about client success" },
+                    {
+                      icon: ShieldCheck,
+                      label: "Adaptable to changing priorities",
+                    },
+                    {
+                      icon: ClipboardCheck,
+                      label: "Committed to continuous learning",
+                    },
+                    {
+                      icon: Lightbulb,
+                      label: "Passionate about client success",
+                    },
                   ].map((trait, index) => (
                     <li key={index} className="flex items-center">
                       <trait.icon className="w-6 h-6 text-primary mr-2" />
