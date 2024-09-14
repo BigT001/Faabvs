@@ -90,7 +90,7 @@ function AboutMePage() {
   return (
     <div className="relative">
       <AnimatedBackground />
-      <div className="container mx-auto py-12 px-4 relative z-10 text-center mb-16">
+      <div className="container mx-auto lg:py-12 px-4 relative z-10 text-center mb-10">
         <h1 className="text-5xl font-extrabold text-gray-900 mb-5 mt-10 relative inline-block">
           <span className="relative z-10">Welcome, I Am Hannah</span> <br />
           <span className="relative z-10 text-primary">
@@ -119,7 +119,7 @@ function AboutMePage() {
                 <img
                   alt="faabvs ceo"
                   src="/Faabvs-ceo.png"
-                  className="absolute inset-0 w-full h-full object-cover object-center lg:bottom-0"
+                  className="absolute inset-0  h-full object-cover object-center lg:bottom-0"
                 />
                 <div className="absolute bottom-7 lg:bottom-0 right-0 bg-primary text-white p-6 rounded-tl-lg">
                   <p className="text-2xl font-bold">3+ Years</p>
@@ -128,13 +128,13 @@ function AboutMePage() {
               </div>
 
               <Card className="relative flex flex-col justify-between shadow-xl 
-              border-primary lg:mt-0 -mt-16 w-full sm:w-11/12 md:w-10/12 mx-auto">
+              border-primary lg:mt-0 -mt-16 w-full">
                 <CardHeader>
                   <CardTitle className="text-3xl text-start font-bold text-secondary lg:px-10">
                     I am...
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow text-start lg:px-16">
+                <CardContent className="flex-grow text-start w-full">
                   <p className="text-xl text-gray-600 mb-3">
                     an enthusiastic, competent, and hardworking professional
                     with over 3 years of experience delivering excellent

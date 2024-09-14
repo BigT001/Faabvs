@@ -75,13 +75,13 @@ function Hero() {
         </svg>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 lg:py-10 md:py-10">
         {/* Mobile version - now at the top */}
         <div className="md:hidden text-center mb-6">
           <div className="text-3xl font-bold text-white mb-4 bg-secondary">
             <p className="">FAAB Virtual Solutions.</p>
           </div>
-          <h1 className="text-4xl sm:text-3xl font-bold text-black mb-4">
+          <h1 className="text-5xl sm:text-3xl font-bold text-black mb-4">
             Elevate Your{" "}
             <span className="bg-secondary text-white">Business</span> <br />
             With An <span className="bg-secondary text-white">Expert</span>{" "}
