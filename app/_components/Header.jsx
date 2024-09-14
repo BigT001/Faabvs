@@ -61,26 +61,11 @@ function Header() {
 
           <div className="flex items-center md:hidden">
             <div className="relative mr-3">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-24 pl-8 pr-2 py-1 border rounded-full focus:outline-none 
-                focus:ring-2 focus:ring-primary text-gray-800 text-sm bg-white bg-opacity-20"
-              />
-              <Search
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400"
-                size={16}
-              />
+             
+              
             </div>
             
-            <a
-              href="https://www.instagram.com/hannah_faab"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mr-3 hover:text-secondary"
-            >
-              <Instagram size={24} />
-            </a>
+            
             
             <button
               type="button"
@@ -110,17 +95,7 @@ function Header() {
           </nav>
 
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <div className="relative mr-3">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-40 pl-8 pr-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 text-sm bg-white bg-opacity-20"
-              />
-              <Search
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400"
-                size={16}
-              />
-            </div>
+            
             <a
                href="https://www.instagram.com/hannah_faab"
               target="_blank"
