@@ -249,24 +249,24 @@ const PricingSection = ({
               {tier.price}
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex-grow">
-            <p className="mb-4 text-gray-600">{tier.description}</p>
-            <ul className="space-y-2">
-              {tier.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                  <span>
-                    {feature.split('\n').map((line, lineIndex) => (
-                      <React.Fragment key={lineIndex}>
-                        {line}
-                        {lineIndex < feature.split('\n').length - 1 && <br />}
-                      </React.Fragment>
-                    ))}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
+          <CardContent className="flex-grow text-left">
+  <p className="mb-4 text-gray-600 break-words">{tier.description}</p>
+  <ul className="space-y-2">
+    {tier.features.map((feature, featureIndex) => (
+      <li key={featureIndex} className="flex items-start">
+        <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
+        <span className="break-words">
+          {feature.split('\n').map((line, lineIndex) => (
+            <React.Fragment key={lineIndex}>
+              {line}
+              {lineIndex < feature.split('\n').length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </span>
+      </li>
+    ))}
+  </ul>
+</CardContent>
           <div className="p-6 mt-auto">
             <Button
               className="w-full text-white border-2 hover:bg-white 

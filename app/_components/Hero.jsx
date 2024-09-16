@@ -96,7 +96,7 @@ function Hero() {
             Elevate Your{" "}
             <span className="bg-secondary text-white">Business</span> <br />
             With An <span className="bg-secondary text-white">Expert</span>{" "}
-            Virtual Assistance
+            Virtual Assistant.
           </h1>
         </div>
 
@@ -125,7 +125,7 @@ function Hero() {
                 Elevate Your{" "}
                 <span className="bg-secondary text-white">Business</span> With
                 An <span className="bg-secondary text-white">Expert</span>{" "}
-                Virtual Assistance
+                Virtual Assistant.
               </h1>
             </div>
 

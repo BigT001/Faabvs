@@ -196,7 +196,7 @@ const ContactMePage: React.FC = () => {
 
       <div className="space-y-4 justify-center items-center">
         {/* <h3 className="text-2xl font-semibold text-primary items-center justify-center">Contact Information</h3> */}
-        <div className="flex space-x-4 justify-center">
+        <div className="grid lg:flex space-x-4 justify-center">
           {contactInfo.map((item, index) => (
             <div key={index} className="flex items-center space-x-2 mt-10">
               <item.icon className="w-5 h-5 text-secondary" />
