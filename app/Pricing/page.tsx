@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 interface PricingTier {
   name: string;
@@ -207,9 +208,7 @@ const minutesTakingTiers: PricingTier[] = [
     name: "ADD-ON/AD-OC",
     price: "£35 per hour",
     description: "",
-    features: [
-      "Delivery 12-24 hours",
-    ],
+    features: ["Delivery 12-24 hours"],
   },
 ];
 
@@ -259,30 +258,33 @@ const PricingSection = ({
             </CardDescription>
           </CardHeader>
           <CardContent className="flex-grow text-left">
-  <p className="mb-4 text-gray-600 break-words">{tier.description}</p>
-  <ul className="space-y-2">
-    {tier.features.map((feature, featureIndex) => (
-      <li key={featureIndex} className="flex items-start">
-        <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-        <span className="break-words">
-          {feature.split('\n').map((line, lineIndex) => (
-            <React.Fragment key={lineIndex}>
-              {line}
-              {lineIndex < feature.split('\n').length - 1 && <br />}
-            </React.Fragment>
-          ))}
-        </span>
-      </li>
-    ))}
-  </ul>
-</CardContent>
+            <p className="mb-4 text-gray-600 break-words">{tier.description}</p>
+            <ul className="space-y-2">
+              {tier.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-start">
+                  <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
+                  <span className="break-words">
+                    {feature.split("\n").map((line, lineIndex) => (
+                      <React.Fragment key={lineIndex}>
+                        {line}
+                        {lineIndex < feature.split("\n").length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+
           <div className="p-6 mt-auto">
-            <Button
-              className="w-full text-white border-2 hover:bg-white 
-            hover:border-primary hover:text-secondary"
-            >
-              Get Started
-            </Button>
+            <Link href="BookMe">
+              <Button
+                className="w-full text-white border-2 hover:bg-white 
+                 hover:border-primary hover:text-secondary"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
         </Card>
       ))}
@@ -293,11 +295,17 @@ const PricingSection = ({
         <ul className="space-y-2">
           <li className="flex items-start">
             <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-            <span>Meetings exceeding time limits will incur an additional fee of £20 per 30 minutes.</span>
+            <span>
+              Meetings exceeding time limits will incur an additional fee of £20
+              per 30 minutes.
+            </span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-            <span>Tools like Minute.me, Google Docs will be used for easier, quicker and efficient deliveries.</span>
+            <span>
+              Tools like Minute.me, Google Docs will be used for easier, quicker
+              and efficient deliveries.
+            </span>
           </li>
         </ul>
       </div>
@@ -366,21 +374,26 @@ const ComprehensiveServicesPricing = () => {
           tiers={personalAssistantTiers}
         />
 
-<div className="mb-20 lg:px-20 border-2 shadow-lg shadow-secondary lg:p-10 p-6 p border-primary">
-        <h1 className="font-bold text-4xl text-secondary mb-5">
-        Looking for more than one service? 
-        </h1>
-        <p className="text-xl">
-        At FAAB Virtual Solutions, we offer customizable seevice bundles for clients 
-        who require more than one of our virtual assistant services. This allows you 
-        to combine the tasks that best suit your business needs while benefiting from 
-        a tailored package at a competitive rate. Contact us to discuss a personalised 
-        plan that works for you.
-        </p>
+        <div className="mb-20 lg:px-20 border-2 shadow-lg shadow-secondary lg:p-10 p-6 p border-primary">
+          <h1 className="font-bold text-4xl text-secondary mb-5">
+            Looking for more than one service?
+          </h1>
+          <p className="text-xl">
+            At FAAB Virtual Solutions, we offer customizable seevice bundles for
+            clients who require more than one of our virtual assistant services.
+            This allows you to combine the tasks that best suit your business
+            needs while benefiting from a tailored package at a competitive
+            rate. Contact me to discuss a personalised plan that works for you.
+          </p>
+          <div className="p-6 mt-auto flex justify-center">
+            <Link href="BookMe">
+              <Button className="text-white border-2 hover:bg-white hover:border-primary hover:text-secondary font-bold text-xl px-10 py-2">
+                Contact Me Now
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
-      </div>
-
-      
 
       <div className="flex flex-col px-10 lg:px-20 mb-10 md:flex-row gap-4 items-start">
         <div className="flex-1">
@@ -391,12 +404,14 @@ const ComprehensiveServicesPricing = () => {
               </span>{" "}
               <br />
               Utilise the retainer hours within the calendar month of purchase
-              unless specifically pre-agreed, the hours cannot be rolled over. 
+              unless specifically pre-agreed, the hours cannot be rolled over.
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
                 <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
-                <span className="text-xl">Retainer fees are billed monthly, in advance.</span>
+                <span className="text-xl">
+                  Retainer fees are billed monthly, in advance.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
@@ -404,9 +419,11 @@ const ComprehensiveServicesPricing = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
-                <span className="text-xl">Unused meetings/hours do not roll over to the next month.</span>
+                <span className="text-xl">
+                  Unused meetings/hours do not roll over to the next month.
+                </span>
               </li>
-              
+
               <li className="flex items-start gap-2">
                 <Check className="flex-shrink-0 w-5 h-5 text-primary mt-1" />
                 <span className="text-xl">Payments to be made in advance.</span>
@@ -439,8 +456,8 @@ const ComprehensiveServicesPricing = () => {
             <p>
               Hours are tracked using time-tracking software and I am fully
               insured and registered with the Information Commissioner's Office
-              (ICO) for Data Protection purposes. That's it! No hidden charges or
-              additional fees. You don't pay for:
+              (ICO) for Data Protection purposes. That's it! No hidden charges
+              or additional fees. You don't pay for:
             </p>
             <ul className="space-y-2 mt-4">
               <li className="flex items-start gap-2">
