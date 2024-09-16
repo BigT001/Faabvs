@@ -76,8 +76,8 @@ const emailPricingTiers: PricingTier[] = [
     ],
   },
   {
-    name: "Pay as you go £35 per hour ( no additional cost. Only pay for hours used)",
-    price: "MONTHLY RETAINER",
+    name: "MONTHLY RETAINER",
+    price: "",
     description:
       "Minimum of 5hrs per month at £30 per hour. Packages ranges from 5-40hrs per month. ",
     features: [
@@ -85,6 +85,15 @@ const emailPricingTiers: PricingTier[] = [
       "10 hours - £300",
       "20 hours - £600",
       "40 hours - £1,200",
+    ],
+  },
+
+  {
+    name: "ADD-ON/AD-OC",
+    price: "£35 per hour",
+    description: "SUPPORT PACKAGE",
+    features: [
+      "For an extra hand, short-term task, or a one-time project, our ad-hoc package is tailored to fit your schedule.",
     ],
   },
 ];
@@ -340,7 +349,7 @@ const ComprehensiveServicesPricing = () => {
         />
 
         <PricingSection
-          title="Email Management"
+          title="Email/Diary Management"
           tiers={emailPricingTiers}
         />
         <PricingSection
@@ -356,7 +365,22 @@ const ComprehensiveServicesPricing = () => {
           title="Personal Assistant"
           tiers={personalAssistantTiers}
         />
+
+<div className="mb-20 lg:px-20 border-2 shadow-lg shadow-secondary lg:p-10 p-6 p border-primary">
+        <h1 className="font-bold text-4xl text-secondary mb-5">
+        Looking for more than one service? 
+        </h1>
+        <p className="text-xl">
+        At FAAB Virtual Solutions, we offer customizable seevice bundles for clients 
+        who require more than one of our virtual assistant services. This allows you 
+        to combine the tasks that best suit your business needs while benefiting from 
+        a tailored package at a competitive rate. Contact us to discuss a personalised 
+        plan that works for you.
+        </p>
       </div>
+      </div>
+
+      
 
       <div className="flex flex-col px-10 lg:px-20 mb-10 md:flex-row gap-4 items-start">
         <div className="flex-1">
