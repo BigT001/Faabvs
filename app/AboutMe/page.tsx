@@ -167,10 +167,10 @@ function AboutMePage() {
         {/* Updated My Services Section */}
         <section className="bg-white py-16 pt-8">
           <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-primary mb-12">
-              I am exceptional in
+            <h2 className="text-5xl font-bold text-center text-primary mb-12">
+              I Am Exceptional In
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left items-start">
               {[
                 {
                   title: "Customer Service & Support",
@@ -235,29 +235,28 @@ function AboutMePage() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
                   Skills & Expertise
                 </h3>
-                <ul className="space-y-3 text-lg">
-                  {[
-                    {
-                      icon: ClipboardCheck,
-                      label: "Excellent communication skills",
-                    },
-                    {
-                      icon: HardDrive,
-                      label:
-                        "Proficient in various modern vitual assistant tools",
-                    },
-                    {
-                      icon: LayoutDashboard,
-                      label: "Strong problem-solving abilities",
-                    },
-                    { icon: Lightbulb, label: "Attention to detail" },
-                  ].map((skill, index) => (
-                    <li key={index} className="flex items-center">
-                      <skill.icon className="w-6 h-6 text-primary mr-2" />
-                      <span>{skill.label}</span>
-                    </li>
-                  ))}
-                </ul>
+                <ul className="space-y-3 text-lg flex flex-col md:flex-row">
+  {[
+    {
+      icon: ClipboardCheck,
+      label: "Excellent communication skills",
+    },
+    {
+      icon: HardDrive,
+      label: "Proficient in various modern virtual assistant tools",
+    },
+    {
+      icon: LayoutDashboard,
+      label: "Strong problem-solving abilities",
+    },
+    { icon: Lightbulb, label: "Attention to detail" },
+  ].map((skill, index) => (
+    <li key={index} className="flex items-start md:items-center">
+  <skill.icon className="w-6 h-6 text-primary mr-2" />
+  <span className="block text-left md:text-left">{skill.label}</span>
+</li>
+  ))}
+</ul>
               </div>
 
               {/* Work Ethic Card */}
@@ -281,10 +280,10 @@ function AboutMePage() {
                       label: "Passionate about client success",
                     },
                   ].map((trait, index) => (
-                    <li key={index} className="flex items-center">
-                      <trait.icon className="w-6 h-6 text-primary mr-2" />
-                      <span>{trait.label}</span>
-                    </li>
+                    <li key={index} className="flex items-start md:items-center">
+  <trait.icon className="w-6 h-6 text-primary mr-2" />
+  <span className="block text-left md:text-left">{trait.label}</span>
+</li>
                   ))}
                 </ul>
               </div>
