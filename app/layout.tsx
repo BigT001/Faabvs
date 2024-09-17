@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Faabvs - Virtual Assistant Services - Executive Virtual Assistant",
-  description:
-    "Professional virtual assistant services to help you save time and boost productivity.",
+  description: "Professional virtual assistant services to help you save time and boost productivity.",
+  icons: ""
 };
 
 export default function RootLayout({
