@@ -14,10 +14,10 @@ const navItems = [
 ];
 
 const socialMediaLinks = [
+  { name: 'WhatsApp', icon: FaWhatsapp, url: 'https://wa.me/message/G6BRAVC4QWCAI1' },
   { name: 'Instagram', icon: FaInstagram, url: 'https://www.instagram.com/hannah_faab' },
   { name: 'LinkedIn', icon: FaLinkedin, url: 'https://www.linkedin.com/in/hannah-olafayo-b093242b3/' },
   { name: 'Twitter', icon: FaTwitter, url: 'https://twitter.com/your-profile' },
-  { name: 'WhatsApp', icon: FaWhatsapp, url: 'https://wa.me/message/G6BRAVC4QWCAI1' },
 ];
 
 export default function Footer() {
