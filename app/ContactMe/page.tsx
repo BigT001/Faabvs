@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
+import { FaWhatsapp } from 'react-icons/fa';
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
@@ -72,9 +73,10 @@ const ContactMePage: React.FC = () => {
   ];
 
   const socialMedia = [
-    { icon: Instagram, link: "https://www.instagram.com/hannah_faab"  },
+    { icon: FaWhatsapp, link: "https://wa.me/message/G6BRAVC4QWCAI1" },
+    { icon: Instagram, link: "https://www.instagram.com/hannah_faab" },
     { icon: Twitter, link: "https://twitter.com" },
-    { icon: Linkedin, link: "https://www.linkedin.com/in/hannah-olafayo-b093242b3"  },
+    { icon: Linkedin, link: "https://www.linkedin.com/in/hannah-olafayo-b093242b3" },
   ];
 
   return (

@@ -2,6 +2,8 @@ import React from 'react';
 import { FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaWhatsapp } from 'react-icons/fa';
+
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -13,6 +15,7 @@ const navItems = [
 ];
 
 const socialMediaLinks = [
+  { icon: FaWhatsapp, link: "https://wa.me/message/G6BRAVC4QWCAI1" },
   { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/hannah_faab' },
   { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://www.linkedin.com/in/hannah-olafayo-b093242b3/' },
   { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/your-profile' },
